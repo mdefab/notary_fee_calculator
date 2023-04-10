@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fee Calculator</title>
+</head>
+<body>
+    <h1> Calculate your Fees </h1>
+    <form>
+        <label for="mobile">Is this a mobile notarization?</label>
+        <select id="mobile" name="mobile">
+        <option value="">--</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        </select><br>
+        <div class="mobileLocationContainer"></div>
+        <div class="mobileLocationAnswer"></div>
+        <!-- if yes, Javascript will display new question asking if it's for
+        a notarization within Hamilton, if outside, will ask you to contact us to 
+        receive a quote-->
+        <label for="special">Are you requesting a special appointment outside of business hours?</label>
+        <select id="special" name="special">
+        <option value="">--</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        </select> <br>
+        <label for="will">Do you need a certified copy of a multi-page document (e.g. Transcripts, Wills, POAs)?</label>
+        <select id="will" name="will">
+          <option value="">--</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          </select><br>
+        <div class="willPagesInputContainer"></div>
+        <label for="notarizations">Notarizations required: </label> <br>
+        <input type="text" id="notarizations" name="notarizations"> <br>
+        <button class="getQuote"> Submit </button>
+    </form>
+    <div class="quoteContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
